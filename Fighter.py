@@ -1,9 +1,8 @@
-
 import random
 
 def fight():
     # List of fighters
-    fighters = ["Rodtang", "Jon Jones", "Du Bronx", "Conor Mcgregor", "Khalib Nurmagomedov", "Khamzat Chimaev", "Alex Pierera", "Dimitrius Johnson", "Mike Tyson", "Muhamad Ali"] #list of fighters”
+    fighters = ["rodtang", "jon jones", "du bronx", "conor mcgregor", "khalib nurmagomedov", "khamzat chimaev", "alex pierera", "dimitrius johnson", "mike tyson", "muhamad ali"] #list of fighters”
 
 
     print("Welcome to the octagon!")
@@ -17,7 +16,7 @@ def fight():
     while True:
     
         choice = (input("Enter the name of the fighter you would like to represent you: "))
-        if choice in fighters:
+        if choice.lower() in fighters:
             
             break
         else:
@@ -35,7 +34,7 @@ def fight():
     losses = 0
 
     for fighter in fighters:
-        if fighter == choice:
+        if fighter == choice.lower():
             continue
 
         print(f"{choice} vs {fighter}...", end=" ")
